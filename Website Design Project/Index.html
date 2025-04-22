@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Website design project</title>
+</head>
+
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+    }
+    
+    .navbar {
+      display: flex;
+      justify-content: center;
+      background-color: #333;
+      padding: 15px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-size: 18px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      position: relative;
+      padding: 10px 0;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .navbar a::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background-color: #fcfcfc;
+      transition: width 0.3s ease, left 0.3s ease;
+      transform: translateX(-50%);
+    }
+
+    .navbar a:hover {
+      color: #f4f4f4;
+      transform: scale(1.1);
+    }
+
+    .navbar a:hover::before {
+      width: 100%;
+      left: 10;
+    }
+
+    .navbar a.active {
+      background-color: #444;
+      padding: 15px 20px;
+      border-radius: 4px;
+    }
+
+    .navbar a:nth-child(odd) {
+      animation: slideIn 0.5s ease-out 0.3s forwards;
+    }
+
+    .navbar a:nth-child(even) {
+      animation: slideIn 0.5s ease-out 0.5s forwards;
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .navbar:hover {
+      background-color: #444;
+      transition: background-color 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <a href="Index.html" class="nav-link">Home</a>
+    <a href="resorts.html" class="nav-link">Resorts</a>
+    <a href="skigear.html" class="nav-link">Gear</a>
+    <a href="skitips.html" class="nav-link">Tips & Tricks</a>
+    <a href="skinews.html" class="nav-link">News</a>
+  </div>
+
+  <script>
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.forEach(item => item.classList.remove('active'));
+        link.classList.add('active');
+      });
+    });
+  </script>
+
+
+<div class="hero-image">
+  <video autoplay loop muted playsinline class="background-video">
+    <source src="Images/skispray.mp4" type="video/mp4">
+  </video>
+  <div class="hero-text">
+    <h1>Skiing</h1>
+    <p>The Ultimate Guide for 2025</p>
+  </div>
+</div>
+
+<section id="index-header">
+  <h1 class="index-header">Whether You're A Beginner Or A Seasoned Skier, This Site Has Something For You.<br> Learn, Explore, And Level Up Your Skiing Experience.</h1>
+</section>
+<h2 class="image-text">Site Features</h2>
+
+<div id="features">
+  <div class="wrapper">
+      <ul>
+          <li class="feature-1">
+              <h4>Resorts</h4>
+              <p>Explore our curated selection of world-class ski resorts, each offering unique terrain, breathtaking views, and top-tier amenities. Whether you're a beginner or an expert, find your perfect destination to hit the slopes and experience unforgettable winter adventures.</p>
+          </li>
+          <li class="feature-2">
+              <h4>Gear</h4>
+              <p>Discover top-quality ski gear to elevate your performance on the slopes. From precision skis and snowboards to durable outerwear and accessories, we provide everything you need for a safe, comfortable, and thrilling winter experience.</p>
+          </li>
+          <li class="feature-3">
+              <h4>Tips & Tricks</h4>
+              <p>Unlock expert tips and tricks to enhance your skiing experience. Whether you're looking to improve your technique, stay safe on the slopes, or discover the best hidden spots, our guide has everything you need to make the most of your winter adventures.</p>  
+          </li>
+          <li class="feature-4">
+            <h4>Ski News</h4>
+            <p>Stay up-to-date with the latest ski industry news, resort updates, and seasonal trends. Our News page brings you the most important stories, from snowfall reports to gear innovations, keeping you informed and ready for your next adventure.</p>  
+        </li>
+          <div class="clear"></div>
+      </ul>
+  </div>
+</div>
+</body>

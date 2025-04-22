@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Website design project</title>
+</head>
+<body>
+
+    
+</body>
+</html>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    padding: 10px 0;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+
+  .navbar a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #fcfcfc;
+    transition: width 0.3s ease, left 0.3s ease;
+    transform: translateX(-50%);
+  }
+
+  .navbar a:hover {
+    color: #f4f4f4;
+    transform: scale(1.1);
+  }
+
+  .navbar a:hover::before {
+    width: 100%;
+    left: 10;
+  }
+
+  .navbar a.active {
+    background-color: #444;
+    padding: 15px 20px;
+    border-radius: 4px;
+  }
+
+  .navbar a:nth-child(odd) {
+    animation: slideIn 0.5s ease-out 0.3s forwards;
+  }
+
+  .navbar a:nth-child(even) {
+    animation: slideIn 0.5s ease-out 0.5s forwards;
+  }
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .navbar:hover {
+    background-color: #444;
+    transition: background-color 0.3s ease;
+  }
+</style>
+</head>
+<body>
+
+  <div class="navbar">
+    <a href="Index.html" class="nav-link">Home</a>
+    <a href="resorts.html" class="nav-link">Resorts</a>
+    <a href="skigear.html" class="nav-link">Gear</a>
+    <a href="skitips.html" class="nav-link">Tips & Tricks</a>
+    <a href="skinews.html" class="nav-link">News</a>
+  </div>
+
+<script>
+  const navLinks = document.querySelectorAll('.nav-link');
+  
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.forEach(item => item.classList.remove('active'));
+      link.classList.add('active');
+    });
+  });
+</script>
+
+<div class="hero-image">
+  <video autoplay loop muted playsinline class="background-video">
+    <source src="Images/skispray.mp4" type="video/mp4">
+  </video>
+<div class= "hero-text">
+  <h1>Skiing News</h1>
+  <p>Stay up to date</p>
+  </div>
+</div>
+
+<section id="ski-news">
+  <h1>Ski News</h2>
+
+  <article>
+    <h1>La II Mamba Ski Race by Joan Verdú: A New Skiing Celebration in Grandvalira</h3>
+    <p>The second edition of La Mamba Ski Race by Joan Verdú in Grandvalira was a resounding success, attracting over 400 participants. The event, held on the Àliga slope in the El Tarter sector, combined a giant slalom race with obstacles and challenges, emphasizing fun over competition. Laura Larrègola won the women's category with a time of 4:08.692, while Axel Esteve clinched the men's title at 3:37.210. The event also featured a prize for the best costume, adding color and creativity to the race. Joan Verdú expressed enthusiasm for the participants' energy and announced a third edition for next year with more surprises. The event included musical activities, raffles, and workshops, drawing approximately 800 attendees. Additionally, it had a charitable aspect, with yoga sessions benefiting the Integrative Pediatric Oncology Unit at the Pediatric Center Barcelona of the Hospital Sant Joan de Déu.</p>
+    <p><a href="https://as.com/deportes_accion/snow/la-ii-mamba-ski-race-by-joan-verdu-una-nueva-fiesta-del-esqui-en-grandvalira-n/" target="_blank">Read more</a></p>
+  </article>
+
+  <article>
+    <h1>Andorra Starts April with Snow Depths Up to 2.5 Meters</h3>
+    <p>Andorra has begun April with exceptional snow conditions, solidifying its status as a prime spring skiing destination. Ordino Arcalís boasts snow depths up to 2.5 meters and full coverage of its domain, offering optimal conditions for the JAM Extreme FWTJ 3*, a significant junior competition in the Freeride World Tour circuit with 120 participants from nine countries. Grandvalira offers 165 kilometers of skiable terrain with snow depths reaching 240 cm, while Pal Arinsal maintains 93% of its pistes open and its Bike Park operational, enhancing its Ski&Bike offering. The stations are also promoting activities like ski mountaineering, snowshoeing, and guided freeride, taking advantage of the abundant snow and mild temperatures to explore areas such as Pic del Cubil or the Mirador Solar de Tristaina under optimal conditions. The experience is complemented by a lively après-ski scene, including DJ sets and musical programming in iconic spots.</p>
+    <p><a href="https://as.com/deportes_accion/snow/andorra-inicia-abril-con-espesores-de-nieve-de-hasta-25-metros-n/" target="_blank">Read more</a></p>
+  </article>
+
+  <article>
+    <h1>Club Med's Alpine Resorts in France: A Review</h3>
+    <p>A recent review of three Club Med ski resorts in France—Tignes, La Rosière, and Alpe d’Huez—highlights their luxury, convenience, and family-friendly features. Club Med Tignes is praised for its modern design, ski-in/ski-out access, 25-meter pool, luxury Exclusive Collection, vibrant nightlife, and connection to Val d’Isère’s expansive ski terrain. La Rosière stands out as a hidden gem, offering breathtaking mountain views, seamless logistics via user-friendly tech and Sunday turnover days, and cross-border skiing into Italy—all contributing to a friction-free family ski experience. Alpe d’Huez earns accolades for its unbeatable setting, robust après-ski offerings like a premium cheese station, and Olympic-grade amenities. Loved by Olympians and families alike, it offers cozy vibes and quality equipment rentals. The resorts are noted for providing stress-free experiences, allowing both parents and children to enjoy skiing and relaxation alike.</p>
+    <p><a href="https://www.adelaidenow.com.au/lifestyle/club-meds-alpine-resorts-are-booming-i-road-tested-three-in-france-to-see-how-they-stack-up/news-story/57177eb2ea7d86aeb945308bc8efaea1" target="_blank">Read more</a></p>
+  </article>
+
+  <article>
+    <h1>Tragic Snowboarding Accident Claims Aspiring Firefighter</h3>
+    <p>Roman Lacayo, a 25-year-old aspiring firefighter, tragically died in a snowboarding accident at Kirkwood Mountain Resort in California on March 29, 2025, just two days after submitting an application to a fire department. Lacayo, who had recently graduated from a fire academy in Southern California, was snowboarding with his longtime girlfriend and friends when he fell on an intermediate trail and sustained severe head injuries. Despite being quickly taken to a clinic at the resort, he was pronounced dead less than an hour later. His father, Nathan Clardy, expressed profound grief, stating the immense difficulty of losing a child. Resort officials extended condolences, and Clardy urged the public to wear helmets while skiing or snowboarding. A GoFundMe campaign for Lacayo's family has raised over $45,000, with his mother Christyana describing him as the "light of her life" and praising his adventurous spirit and kind nature. The family's loss is being mourned by a supportive community during this incredibly difficult time.</p>
+    <p><a href="https://people.com/aspiring-firefighter-dies-in-snowboarding-accident-2-days-after-submitting-job-application-at-department-11709168" target="_blank">Read more</a></p>
+  </article>
+
+  <article>
+    <h1>7-Year-Old Girl Killed in Lake Tahoe Ski Resort Accident</h3>
+    <p>Adelyn Grimes, a 7-year-old girl from Reno, Nevada, tragically died after being struck by a falling boulder at Diamond Peak Ski Resort in Incline Village, near Lake Tahoe, on March 29, 2025. The incident, described as a "non-skiing accident," occurred around 3:38 p.m., prompting an immediate response from the Diamond Peak Ski Patrol and emergency services. Despite their efforts, Adelyn succumbed to her injuries, which were later determined to be blunt force trauma to her neck and chest. The Washoe County Regional Medical Examiner's Office ruled the death accidental, and authorities have stated there is no suspicion of foul play. Adelyn was a member of the Sugar Bowl race team and was at the resort for an under-12 skiing championship. The tragedy has deeply impacted the ski resort community, and counseling services have been offered to affected staff members. A GoFundMe campaign was launched by her aunt, expressing the profound grief her family is experiencing.</p>
+    <p><a href="https://nypost.com/2025/04/02/us-news/nevada-girl-7-killed-in-lake-tahoe-ski-resort-accident/" target="_blank">Read more</a></p>
+  </article>
+</section>
