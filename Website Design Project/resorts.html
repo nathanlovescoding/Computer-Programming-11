@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Website design project</title>
+</head>
+<body>
+
+    
+</body>
+</html>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    padding: 10px 0;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+
+  .navbar a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #fcfcfc;
+    transition: width 0.3s ease, left 0.3s ease;
+    transform: translateX(-50%);
+  }
+
+  .navbar a:hover {
+    color: #f4f4f4;
+    transform: scale(1.1);
+  }
+
+  .navbar a:hover::before {
+    width: 100%;
+    left: 10;
+  }
+
+  .navbar a.active {
+    background-color: #444;
+    padding: 15px 20px;
+    border-radius: 4px;
+  }
+
+  .navbar a:nth-child(odd) {
+    animation: slideIn 0.5s ease-out 0.3s forwards;
+  }
+
+  .navbar a:nth-child(even) {
+    animation: slideIn 0.5s ease-out 0.5s forwards;
+  }
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .navbar:hover {
+    background-color: #444;
+    transition: background-color 0.3s ease;
+  }
+</style>
+</head>
+<body>
+
+  <div class="navbar">
+    <a href="Index.html" class="nav-link">Home</a>
+    <a href="resorts.html" class="nav-link">Resorts</a>
+    <a href="skigear.html" class="nav-link">Gear</a>
+    <a href="skitips.html" class="nav-link">Tips & Tricks</a>
+    <a href="skinews.html" class="nav-link">News</a>
+  </div>
+
+<script>
+  const navLinks = document.querySelectorAll('.nav-link');
+  
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.forEach(item => item.classList.remove('active'));
+      link.classList.add('active');
+    });
+  });
+</script>
+
+<div class="hero-image">
+  <video autoplay loop muted playsinline class="background-video">
+    <source src="Images/SkiMountains.mp4" type="video/mp4">
+  </video>
+<div class= "hero-text">
+  <h1>Ski Resorts</h1>
+  <p>Best Spots to Stay</p>
+  </div>
+</div>
+
+<section id="resorts" class="resorts">
+  <h2 class="image-text resort-title">Our Featured Resorts</h2>
+  <div class="resort-cards">
+    <div class="resort-card">
+      <img src="Images/whistler3.jpg" alt="Resort 1">
+      <div class="text-overlay">
+        <h3>Whistler Blackcomb</h3>
+        <p>Whisler Blackcomb is the largest ski resort in North America, offering world-class terrain, breathtaking alpine views, and a vibrant village experience.</p>
+        <a href="https://www.whistlerblackcomb.com/">Learn More</a>
+      </div>
+    </div>
+    <div class="resort-card">
+      <img src="Images/LesAcres2.jpg" alt="Resort 2">
+      <div class="text-overlay">
+      <h3>Les Arcs</h3>
+      <p>Les Acrs is a high-altitude French ski resort with diverse slopes, modern lifts, and excellent off-piste opportunities, perfect for all skill levels.</p>
+      <a href="https://www.lesarcs.com/">Learn More</a>
+    </div>
+    </div>
+    <div class="resort-card">
+      <img src="Images/telluride2.jpg" alt="Resort 3">
+      <div class="text-overlay">
+      <h3>Telluride</h3>
+      <p>Telluride Ski Resort is known for its stunning scenery, uncrowded slopes, and a perfect blend of expert terrain and laid-back mountain town charm.</p>
+      <a href="https://tellurideskiresort.com/">Learn More</a>
+    </div>
+  </div>
+</section>
+
+https://codepen.io/kabel22/pen/xbKNWrQ
